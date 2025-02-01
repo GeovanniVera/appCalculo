@@ -27,14 +27,15 @@ class _CadenaScreenState extends State<CadenaScreen> {
     int vocales = 0;
     int i = 0;
     while (i < cadena.length) {
-      cadena.toLowerCase();
-      if (cadena[i] == 'a' ||
-          cadena[i] == 'e' ||
-          cadena[i] == 'i' ||
-          cadena[i] == 'o' ||
-          cadena[i] == 'u') {
+      String newCadena = cadena.toLowerCase();
+      if (newCadena[i] == 'a' ||
+          newCadena[i] == 'e' ||
+          newCadena[i] == 'i' ||
+          newCadena[i] == 'o' ||
+          newCadena[i] == 'u') {
         vocales++;
       }
+      i++;
     }
     return vocales;
   }
@@ -61,7 +62,7 @@ class _CadenaScreenState extends State<CadenaScreen> {
               textAlign: TextAlign.center,
             ),
             subtitle: Text(
-                'Vocales: ${calcularVocales(cadena)} /n Invertir: ${invertirCadena(cadena)}'),
+                'Vocales: ${calcularVocales(nombres[index])} \n Invertir: ${invertirCadena(nombres[index])}'),
           )),
         );
       },
