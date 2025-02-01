@@ -77,12 +77,13 @@ class _HomeScreenState extends State<HomeScreen> {
             style: TextStyle(fontSize: 24, color: Colors.blue),
           ),
           const SizedBox(height: 20), // Espacio entre los textos
-          Text(
-            "Raiz:",
-            style: TextStyle(
-              fontSize: 24,
+          ListTile(
+            title: Text(
+              'Raiz: $raiz',
+              style: TextStyle(fontSize: 24, color: Colors.blue),
             ),
           ),
+          const SizedBox(height: 20),
           Text(
             '$raiz',
             style: TextStyle(fontSize: 24, color: Colors.blue),
